@@ -4,7 +4,7 @@ import joblib
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS (app)
 
 loaded_model = joblib.load("models/model_diabetes.pkl")
 
@@ -31,7 +31,7 @@ def index():
         "data" : None
     })
 
-@app.route ('/api/predict', methods = {"POST"})
+@app.route('/api/predict', methods=['POST'])
 def predict():
     data = request.get_json()
 
